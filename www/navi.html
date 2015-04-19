@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <title>My React App</title>
+	<link rel="stylesheet" href="./scripts/style.css">
+    <script src="./scripts/react-0.13.2.js"></script>
+    <script src="./scripts/JSXTransformer-0.13.2.js"></script>
+  </head>
+  <body>
+      <div id="example"></div>
+      <div id="timer"></div>
+      <div id="content"></div>
+	    <div class="container">
+	      <h1>React + Bootstrap Tree View</h1>
+	      <br/>
+	      <div class="row">
+	        <div id="treeview"></div>
+	      </div>
+	    </div>
+
+<script src="./build/SwipeViews.js"></script>
+	
+    <script type="text/jsx">
+		var data = [
+		  {
+		    text: "Parent 1",
+		    nodes: [
+		      {
+		        text: "Child 1",
+		        nodes: [
+		          {
+		            text: "Grandchild 1"
+		          },
+		          {
+		            text: "Grandchild 2"
+		          }
+		        ]
+		      },
+		      {
+		        text: "Child 2"
+		      }
+		    ]
+		  },
+		  {
+		    text: "Parent 2"
+		  },
+		  {
+		    text: "Parent 3"
+		  },
+		  {
+		    text: "Parent 4"
+		  },
+		  {
+		    text: "Parent 5"
+		  }
+		];
+		
+		
+        React.render(
+                <TreeView data={data} />,
+                document.getElementById('treeview')
+            );
+    </script>
+	
+  </body>
+</html>

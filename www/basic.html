@@ -1,0 +1,29 @@
+<html>
+    <head>
+		<link rel="stylesheet" href="./scripts/basic.css">
+        <script language="javascript" type="text/javascript">
+ 
+            function callback(){
+                console.log("callback!");
+                alert("called!");
+            }
+ 
+ 
+            function sendStuff() {
+                console.log("sendStuff!");
+                hub.display("hello? bon jour!");
+            }
+ 
+            function ApplicationIsReady() {
+                console.log("ApplicationIsReady!");
+                hub.on_client_event.connect(callback);
+            }
+ 
+        </script>
+    </head>
+    <body>
+        Example PySide WebApp!<br>
+        <button onclick=sendStuff()>Click me!</button>
+    </body>
+</html>
+
